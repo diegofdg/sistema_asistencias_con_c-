@@ -63,6 +63,8 @@ namespace SistemaAsistencias.Presentacion
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panelBienvenida = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -75,6 +77,8 @@ namespace SistemaAsistencias.Presentacion
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panelBienvenida.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -455,11 +459,33 @@ namespace SistemaAsistencias.Presentacion
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.panel2.Controls.Add(this.panelBienvenida);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(152, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(832, 661);
             this.panel2.TabIndex = 1;
+            // 
+            // panelBienvenida
+            // 
+            this.panelBienvenida.Controls.Add(this.label3);
+            this.panelBienvenida.Location = new System.Drawing.Point(206, 42);
+            this.panelBienvenida.Name = "panelBienvenida";
+            this.panelBienvenida.Size = new System.Drawing.Size(467, 293);
+            this.panelBienvenida.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(467, 293);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Bienvenido a Orus 369";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MenuPrincipal
             // 
@@ -469,7 +495,10 @@ namespace SistemaAsistencias.Presentacion
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "MenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
@@ -482,6 +511,8 @@ namespace SistemaAsistencias.Presentacion
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panelBienvenida.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -522,5 +553,7 @@ namespace SistemaAsistencias.Presentacion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panelBienvenida;
+        private System.Windows.Forms.Label label3;
     }
 }
