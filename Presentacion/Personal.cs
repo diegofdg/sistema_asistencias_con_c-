@@ -21,7 +21,7 @@ namespace SistemaAsistencias.Presentacion
         int Idcargo = 0;
         int desde = 1;
         int hasta = 10;
-        int contador;
+        int Contador;
         int Idpersonal;
         private int items_por_pagina = 10;
         string Estado;
@@ -88,6 +88,7 @@ namespace SistemaAsistencias.Presentacion
             parametros.SueldoPorHora = Convert.ToDouble(txtSueldoHora.Text);
             if (funcion.InsertarPersonal(parametros) == true)
             {
+                ReiniciarPaginado();
                 MostrarPersonal();
                 PanelRegistros.Visible = false;
             }
@@ -105,6 +106,7 @@ namespace SistemaAsistencias.Presentacion
         private void DiseñarDtvPersonal()
         {
             Bases.DiseñoDtv(ref dataListadoPersonal);
+            Bases.DiseñoDtvEliminar(ref dataListadoPersonal);
             PanelPaginado.Visible = true;
             dataListadoPersonal.Columns[2].Visible = false;
             dataListadoPersonal.Columns[7].Visible = false;
@@ -250,7 +252,33 @@ namespace SistemaAsistencias.Presentacion
 
         private void Personal_Load(object sender, EventArgs e)
         {
+            ReiniciarPaginado();
             MostrarPersonal();
+        }
+
+        private void ReiniciarPaginado()
+        {
+            desde = 1;
+            hasta = 10;
+            Contar();
+
+            if (Contador > hasta)
+            {
+
+                btn_Sig.Visible = true;
+                btn_atras.Visible = false;
+                btn_Ultima.Visible = true;
+                btn_Primera.Visible = true;
+            }
+            else
+            {
+
+                btn_Sig.Visible = false;
+                btn_atras.Visible = false;
+                btn_Ultima.Visible = false;
+                btn_Primera.Visible = false;
+            }
+            Paginar();
         }
 
         private void dataListadoPersonal_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -280,6 +308,7 @@ namespace SistemaAsistencias.Presentacion
             }
             else
             {
+                LocalizarDtvCargos();
                 txtNombres.Text = dataListadoPersonal.SelectedCells[3].Value.ToString();
                 txtIdentificacion.Text = dataListadoPersonal.SelectedCells[4].Value.ToString();
                 cbxPais.Text = dataListadoPersonal.SelectedCells[10].Value.ToString();
@@ -300,8 +329,25 @@ namespace SistemaAsistencias.Presentacion
 
         private void restaurar_personal()
         {
+            DialogResult result = MessageBox.Show("Este Personal se Elimino. ¿Desea Volver a Habilitarlo?", "Restauracion de registros", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                HabilitarPersonal();
+            }
+        }
+
+        private void HabilitarPersonal()
+        {
+            Lpersonal parametros = new Lpersonal();
+            Dpersonal funcion = new Dpersonal();
+            parametros.Id_personal = Idpersonal;
+            if (funcion.RestaurarPersonal(parametros) == true)
+            {
+                MostrarPersonal();
+            }
 
         }
+
         private void EliminarPersonal()
         {
             Idpersonal = Convert.ToInt32(dataListadoPersonal.SelectedCells[2].Value);
@@ -312,6 +358,123 @@ namespace SistemaAsistencias.Presentacion
             {
                 MostrarPersonal();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DiseñarDtvPersonal();
+            timer1.Stop();
+        }
+
+        private void btnGuardarCambiosPersonal_Click(object sender, EventArgs e)
+        {
+            EditarPersonal();
+        }
+
+        private void EditarPersonal()
+        {
+            Lpersonal parametros = new Lpersonal();
+            Dpersonal funcion = new Dpersonal();
+            parametros.Id_personal = Idpersonal;
+            parametros.Nombres = txtNombres.Text;
+            parametros.Identificacion = txtIdentificacion.Text;
+            parametros.Pais = cbxPais.Text;
+            parametros.Id_cargo = Idcargo;
+            parametros.SueldoPorHora = Convert.ToDouble(txtSueldoHora.Text);
+            if (funcion.EditarPersonal(parametros) == true)
+            {
+                MostrarPersonal();
+                PanelRegistros.Visible = false;
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            desde += 10;
+            hasta += 10;
+            MostrarPersonal();
+            Contar();
+
+            if (Contador > hasta)
+            {
+                btn_Sig.Visible = true;
+                btn_atras.Visible = true;
+            }
+            else
+            {
+                btn_Sig.Visible = false;
+                btn_atras.Visible = true;
+            }
+            Paginar();
+        }
+
+        private void Paginar()
+        {
+            try
+            {
+                lbl_Pagina.Text = (hasta / items_por_pagina).ToString();
+                lbl_totalPaginas.Text = Math.Ceiling(Convert.ToSingle(Contador) / items_por_pagina).ToString();
+                totalPaginas = Convert.ToInt32(lbl_totalPaginas.Text);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+        private void Contar()
+        {
+            Dpersonal funcion = new Dpersonal();
+            funcion.ContarPersonal(ref Contador);
+        }
+
+        
+
+        private void btn_Ultima_Click(object sender, EventArgs e)
+        {
+            hasta = totalPaginas * items_por_pagina;
+            desde = hasta - 9;
+            MostrarPersonal();
+            Contar();
+            if (Contador > hasta)
+            {
+                btn_Sig.Visible = true;
+                btn_atras.Visible = true;
+            }
+            else
+            {
+                btn_Sig.Visible = false;
+                btn_atras.Visible = true;
+            }
+            Paginar();
+        }
+
+        private void btn_Primera_Click(object sender, EventArgs e)
+        {
+            ReiniciarPaginado();
+            MostrarPersonal();
+        }
+
+        private void btn_atras_Click(object sender, EventArgs e)
+        {
+            desde -= 10;
+            hasta -= 10;
+            MostrarPersonal();
+            Contar();
+            if (Contador > hasta)
+            {
+                btn_Sig.Visible = true;
+                btn_atras.Visible = true;
+            }
+            else
+            {
+                btn_Sig.Visible = false;
+                btn_atras.Visible = true;
+            }
+            if (desde == 1)
+            {
+                ReiniciarPaginado();
+            }
+            Paginar();
         }
     }
 }
