@@ -228,6 +228,7 @@ namespace SistemaAsistencias.Presentacion
         private void btnVolverPersonal_Click(object sender, EventArgs e)
         {
             PanelRegistros.Visible = false;
+            PanelPaginado.Visible = true;
         }
 
         private void btnGuardarCambiosC_Click(object sender, EventArgs e)
@@ -475,6 +476,26 @@ namespace SistemaAsistencias.Presentacion
                 ReiniciarPaginado();
             }
             Paginar();
+        }
+
+        private void txtBuscador_TextChanged(object sender, EventArgs e)
+        {
+            BuscarPersonal();
+        }
+
+        private void BuscarPersonal()
+        {
+            DataTable dt = new DataTable();
+            Dpersonal funcion = new Dpersonal();
+            funcion.BuscarPersonal(ref dt, desde, hasta, txtBuscador.Text);
+            dataListadoPersonal.DataSource = dt;
+            DiseñarDtvPersonal();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ReiniciarPaginado();
+            MostrarPersonal();
         }
     }
 }
