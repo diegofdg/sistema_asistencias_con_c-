@@ -62,7 +62,7 @@ namespace SistemaAsistencias.Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.PanelPadre = new System.Windows.Forms.Panel();
             this.panelBienvenida = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -77,7 +77,7 @@ namespace SistemaAsistencias.Presentacion
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.PanelPadre.SuspendLayout();
             this.panelBienvenida.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,9 +103,9 @@ namespace SistemaAsistencias.Presentacion
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 85);
+            this.panel4.Location = new System.Drawing.Point(0, 202);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(152, 576);
+            this.panel4.Size = new System.Drawing.Size(152, 459);
             this.panel4.TabIndex = 0;
             // 
             // panel17
@@ -116,7 +116,7 @@ namespace SistemaAsistencias.Presentacion
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(0, 320);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(152, 256);
+            this.panel17.Size = new System.Drawing.Size(152, 139);
             this.panel17.TabIndex = 4;
             // 
             // label1
@@ -400,6 +400,7 @@ namespace SistemaAsistencias.Presentacion
             this.btnPersonal.TabIndex = 1;
             this.btnPersonal.Text = "Personal";
             this.btnPersonal.UseVisualStyleBackColor = false;
+            this.btnPersonal.Click += new System.EventHandler(this.btnPersonal_Click);
             // 
             // btnConsultas
             // 
@@ -457,15 +458,15 @@ namespace SistemaAsistencias.Presentacion
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // panel2
+            // PanelPadre
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.panel2.Controls.Add(this.panelBienvenida);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(152, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(832, 661);
-            this.panel2.TabIndex = 1;
+            this.PanelPadre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.PanelPadre.Controls.Add(this.panelBienvenida);
+            this.PanelPadre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelPadre.Location = new System.Drawing.Point(152, 0);
+            this.PanelPadre.Name = "PanelPadre";
+            this.PanelPadre.Size = new System.Drawing.Size(832, 661);
+            this.PanelPadre.TabIndex = 1;
             // 
             // panelBienvenida
             // 
@@ -492,7 +493,7 @@ namespace SistemaAsistencias.Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.PanelPadre);
             this.Controls.Add(this.panel1);
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -511,7 +512,7 @@ namespace SistemaAsistencias.Presentacion
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.PanelPadre.ResumeLayout(false);
             this.panelBienvenida.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -528,7 +529,7 @@ namespace SistemaAsistencias.Presentacion
         private System.Windows.Forms.Button btnPersonal;
         private System.Windows.Forms.Button btnConsultas;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel PanelPadre;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Button btnRespaldos;
         private System.Windows.Forms.Panel panel15;
