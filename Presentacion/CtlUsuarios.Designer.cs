@@ -44,7 +44,7 @@ namespace SistemaAsistencias.Presentacion
             this.panelRegistro = new System.Windows.Forms.Panel();
             this.panelIcono = new System.Windows.Forms.Panel();
             this.btnVolverIcono = new System.Windows.Forms.Button();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.AgregarIconoPc = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -75,13 +75,14 @@ namespace SistemaAsistencias.Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dlg = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoUsuarios)).BeginInit();
             this.panelRegistro.SuspendLayout();
             this.panelIcono.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AgregarIconoPc)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -261,12 +262,12 @@ namespace SistemaAsistencias.Presentacion
             // 
             this.panelIcono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.panelIcono.Controls.Add(this.btnVolverIcono);
-            this.panelIcono.Controls.Add(this.pictureBox11);
+            this.panelIcono.Controls.Add(this.AgregarIconoPc);
             this.panelIcono.Controls.Add(this.flowLayoutPanel2);
             this.panelIcono.Controls.Add(this.flowLayoutPanel3);
-            this.panelIcono.Location = new System.Drawing.Point(605, 57);
+            this.panelIcono.Location = new System.Drawing.Point(703, 57);
             this.panelIcono.Name = "panelIcono";
-            this.panelIcono.Size = new System.Drawing.Size(330, 550);
+            this.panelIcono.Size = new System.Drawing.Size(213, 325);
             this.panelIcono.TabIndex = 618;
             this.panelIcono.Visible = false;
             // 
@@ -285,16 +286,18 @@ namespace SistemaAsistencias.Presentacion
             this.btnVolverIcono.TabIndex = 7;
             this.btnVolverIcono.Text = "Volver";
             this.btnVolverIcono.UseVisualStyleBackColor = true;
+            this.btnVolverIcono.Click += new System.EventHandler(this.btnVolverIcono_Click);
             // 
-            // pictureBox11
+            // AgregarIconoPc
             // 
-            this.pictureBox11.Image = global::SistemaAsistencias.Properties.Resources.foto__1_;
-            this.pictureBox11.Location = new System.Drawing.Point(26, 413);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(168, 164);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 5;
-            this.pictureBox11.TabStop = false;
+            this.AgregarIconoPc.Image = global::SistemaAsistencias.Properties.Resources.foto__1_;
+            this.AgregarIconoPc.Location = new System.Drawing.Point(26, 413);
+            this.AgregarIconoPc.Name = "AgregarIconoPc";
+            this.AgregarIconoPc.Size = new System.Drawing.Size(168, 164);
+            this.AgregarIconoPc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.AgregarIconoPc.TabIndex = 5;
+            this.AgregarIconoPc.TabStop = false;
+            this.AgregarIconoPc.Click += new System.EventHandler(this.AgregarIconoPc_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -316,6 +319,7 @@ namespace SistemaAsistencias.Presentacion
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 
@@ -326,6 +330,7 @@ namespace SistemaAsistencias.Presentacion
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox5
             // 
@@ -336,6 +341,7 @@ namespace SistemaAsistencias.Presentacion
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox6
             // 
@@ -346,6 +352,7 @@ namespace SistemaAsistencias.Presentacion
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // flowLayoutPanel3
             // 
@@ -367,6 +374,7 @@ namespace SistemaAsistencias.Presentacion
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // pictureBox8
             // 
@@ -377,6 +385,7 @@ namespace SistemaAsistencias.Presentacion
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 1;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox9
             // 
@@ -387,6 +396,7 @@ namespace SistemaAsistencias.Presentacion
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 2;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // pictureBox10
             // 
@@ -397,6 +407,7 @@ namespace SistemaAsistencias.Presentacion
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 3;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // lblanuncioIcono
             // 
@@ -404,10 +415,11 @@ namespace SistemaAsistencias.Presentacion
             this.lblanuncioIcono.ForeColor = System.Drawing.Color.White;
             this.lblanuncioIcono.Location = new System.Drawing.Point(463, 19);
             this.lblanuncioIcono.Name = "lblanuncioIcono";
-            this.lblanuncioIcono.Size = new System.Drawing.Size(122, 102);
+            this.lblanuncioIcono.Size = new System.Drawing.Size(136, 121);
             this.lblanuncioIcono.TabIndex = 617;
             this.lblanuncioIcono.Text = "Elije un Icono";
             this.lblanuncioIcono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblanuncioIcono.Click += new System.EventHandler(this.lblanuncioIcono_Click);
             // 
             // Icono
             // 
@@ -417,6 +429,7 @@ namespace SistemaAsistencias.Presentacion
             this.Icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Icono.TabIndex = 616;
             this.Icono.TabStop = false;
+            this.Icono.Click += new System.EventHandler(this.Icono_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -479,6 +492,7 @@ namespace SistemaAsistencias.Presentacion
             this.btnvolver.TabIndex = 9;
             this.btnvolver.Text = "Volver";
             this.btnvolver.UseVisualStyleBackColor = true;
+            this.btnvolver.Click += new System.EventHandler(this.btnvolver_Click);
             // 
             // panel6
             // 
@@ -557,6 +571,7 @@ namespace SistemaAsistencias.Presentacion
             this.txtcontraseña.Name = "txtcontraseña";
             this.txtcontraseña.Size = new System.Drawing.Size(134, 26);
             this.txtcontraseña.TabIndex = 6;
+            this.txtcontraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontraseña_KeyPress);
             // 
             // label4
             // 
@@ -615,6 +630,10 @@ namespace SistemaAsistencias.Presentacion
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.ReadOnly = true;
             // 
+            // dlg
+            // 
+            this.dlg.FileName = "openFileDialog1";
+            // 
             // CtlUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -624,6 +643,7 @@ namespace SistemaAsistencias.Presentacion
             this.Controls.Add(this.panel1);
             this.Name = "CtlUsuarios";
             this.Size = new System.Drawing.Size(1047, 751);
+            this.Load += new System.EventHandler(this.CtlUsuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -632,7 +652,7 @@ namespace SistemaAsistencias.Presentacion
             this.panelRegistro.ResumeLayout(false);
             this.panelRegistro.PerformLayout();
             this.panelIcono.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AgregarIconoPc)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -688,7 +708,7 @@ namespace SistemaAsistencias.Presentacion
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox AgregarIconoPc;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
@@ -699,5 +719,6 @@ namespace SistemaAsistencias.Presentacion
         private System.Windows.Forms.Button btnVolverIcono;
         private System.Windows.Forms.DataGridView datalistadoModulos;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Marcar;
+        private System.Windows.Forms.OpenFileDialog dlg;
     }
 }

@@ -37,6 +37,7 @@ namespace SistemaAsistencias.Datos
 			}
 
 		}
+
 		public void MostrarUsuarios(ref DataTable dt)
 		{
 			try
@@ -47,6 +48,27 @@ namespace SistemaAsistencias.Datos
 			}
 			catch (Exception ex)
 			{
+				MessageBox.Show(ex.StackTrace);
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
+
+		public void ObtenerIdUsuario(ref int Idusuario, string Login)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlCommand cmd = new SqlCommand("ObtenerIdUsuario", CONEXIONMAESTRA.conectar);
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@Login", Login);
+				Idusuario = Convert.ToInt32(cmd.ExecuteScalar());
+			}
+			catch (Exception ex)
+			{
+
 				MessageBox.Show(ex.StackTrace);
 			}
 			finally
