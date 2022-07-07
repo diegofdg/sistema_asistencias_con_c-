@@ -76,5 +76,44 @@ namespace SistemaAsistencias.Datos
 				CONEXIONMAESTRA.cerrar();
 			}
 		}
+
+		public void VerificarUsuarios(ref string Indicador)
+		{
+			try
+			{
+				int Iduser;
+				CONEXIONMAESTRA.abrir();
+				SqlCommand da = new SqlCommand("Select idUsuario From Usuarios", CONEXIONMAESTRA.conectar);
+				Iduser = Convert.ToInt32(da.ExecuteScalar());
+				CONEXIONMAESTRA.cerrar();
+				Indicador = "Correcto";
+			}
+			catch (Exception)
+			{
+				Indicador = "Incorrecto";
+			}
+		}
+
+		public void ValidarUsuario(Lusuarios parametros, ref int id)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlCommand cmd = new SqlCommand("ValidarUsuario", CONEXIONMAESTRA.conectar);
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@password", parametros.Password);
+				cmd.Parameters.AddWithValue("@login", parametros.Login);
+				id = Convert.ToInt32(cmd.ExecuteScalar());
+			}
+			catch (Exception ex)
+			{
+				id = 0;
+
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
 	}
 }
