@@ -47,11 +47,23 @@
     <Compile Include="Datos\CONEXIONMAESTRA.cs" />
     <Compile Include="Datos\Dasistencias.cs" />
     <Compile Include="Datos\Dcargos.cs" />
+    <Compile Include="Datos\Dmodulos.cs" />
+    <Compile Include="Datos\Dpermisos.cs" />
     <Compile Include="Datos\Dpersonal.cs" />
+    <Compile Include="Datos\Dusuarios.cs" />
     <Compile Include="Logica\Bases.cs" />
     <Compile Include="Logica\Lasistencias.cs" />
     <Compile Include="Logica\Lcargos.cs" />
+    <Compile Include="Logica\Lmodulos.cs" />
+    <Compile Include="Logica\Lpermisos.cs" />
     <Compile Include="Logica\Lpersonal.cs" />
+    <Compile Include="Logica\Lusuarios.cs" />
+    <Compile Include="Presentacion\CtlUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CtlUsuarios.Designer.cs">
+      <DependentUpon>CtlUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MonoOrus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\extraterrestre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fuego %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MonoOrus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuclear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palanca-de-mando.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trinaranja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comenzar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
