@@ -45,9 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\CONEXIONMAESTRA.cs" />
+    <Compile Include="Datos\Dasistencias.cs" />
     <Compile Include="Datos\Dcargos.cs" />
     <Compile Include="Datos\Dpersonal.cs" />
     <Compile Include="Logica\Bases.cs" />
+    <Compile Include="Logica\Lasistencias.cs" />
     <Compile Include="Logica\Lcargos.cs" />
     <Compile Include="Logica\Lpersonal.cs" />
     <Compile Include="Presentacion\MenuPrincipal.cs">
@@ -62,6 +64,12 @@
     <Compile Include="Presentacion\Personal.Designer.cs">
       <DependentUpon>Personal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\TomarAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\TomarAsistencia.Designer.cs">
+      <DependentUpon>TomarAsistencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentacion\MenuPrincipal.resx">
@@ -69,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Personal.resx">
       <DependentUpon>Personal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\TomarAsistencia.resx">
+      <DependentUpon>TomarAsistencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -128,6 +139,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MonoOrus1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

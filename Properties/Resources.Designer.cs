@@ -63,6 +63,16 @@ namespace SistemaAsistencias.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap azul {
+            get {
+                object obj = ResourceManager.GetObject("azul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buscar {
             get {
                 object obj = ResourceManager.GetObject("buscar", resourceCulture);
@@ -146,6 +156,16 @@ namespace SistemaAsistencias.Properties {
         internal static System.Drawing.Bitmap MonoOrus {
             get {
                 object obj = ResourceManager.GetObject("MonoOrus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MonoOrus1 {
+            get {
+                object obj = ResourceManager.GetObject("MonoOrus1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

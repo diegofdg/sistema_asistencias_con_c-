@@ -128,6 +128,26 @@ namespace SistemaAsistencias.Datos
             }
         }
 
+        public void BuscarPersonalIdentidad(ref DataTable dt, string buscador)
+        {
+            try
+            {
+                CONEXIONMAESTRA.abrir();
+                SqlDataAdapter da = new SqlDataAdapter("BuscarPersonalIdentidad", CONEXIONMAESTRA.conectar);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@Buscador", buscador);
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
+            finally
+            {
+                CONEXIONMAESTRA.cerrar();
+            }
+        }
+
         public bool RestaurarPersonal(Lpersonal parametros)
         {
             try
