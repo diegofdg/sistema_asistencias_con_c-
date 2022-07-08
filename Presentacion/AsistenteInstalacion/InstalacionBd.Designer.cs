@@ -30,11 +30,14 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstalacionBd));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Label66 = new System.Windows.Forms.Label();
             this.PictureBox7 = new System.Windows.Forms.PictureBox();
             this.Panel2 = new System.Windows.Forms.Panel();
+            this.Panel9 = new System.Windows.Forms.Panel();
+            this.lblbuscador_de_servidores = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnInstalarServidor = new System.Windows.Forms.Button();
             this.Panel4 = new System.Windows.Forms.Panel();
             this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.Panel6 = new System.Windows.Forms.Panel();
@@ -47,10 +50,6 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.Label1 = new System.Windows.Forms.Label();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel5 = new System.Windows.Forms.Panel();
-            this.Panel9 = new System.Windows.Forms.Panel();
-            this.lblbuscador_de_servidores = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnInstalarServidor = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.Label15 = new System.Windows.Forms.Label();
@@ -87,12 +86,12 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).BeginInit();
             this.Panel2.SuspendLayout();
+            this.Panel9.SuspendLayout();
             this.Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.Panel6.SuspendLayout();
             this.Panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
-            this.Panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.GroupBox6.SuspendLayout();
             this.Panel10.SuspendLayout();
@@ -107,7 +106,7 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1438, 90);
+            this.panel1.Size = new System.Drawing.Size(1370, 90);
             this.panel1.TabIndex = 621;
             // 
             // Label66
@@ -141,6 +140,52 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.Panel2.Size = new System.Drawing.Size(485, 539);
             this.Panel2.TabIndex = 622;
             // 
+            // Panel9
+            // 
+            this.Panel9.Controls.Add(this.lblbuscador_de_servidores);
+            this.Panel9.Controls.Add(this.panel3);
+            this.Panel9.Location = new System.Drawing.Point(16, 107);
+            this.Panel9.Name = "Panel9";
+            this.Panel9.Size = new System.Drawing.Size(452, 153);
+            this.Panel9.TabIndex = 619;
+            // 
+            // lblbuscador_de_servidores
+            // 
+            this.lblbuscador_de_servidores.BackColor = System.Drawing.Color.Transparent;
+            this.lblbuscador_de_servidores.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblbuscador_de_servidores.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblbuscador_de_servidores.ForeColor = System.Drawing.Color.White;
+            this.lblbuscador_de_servidores.Location = new System.Drawing.Point(3, 0);
+            this.lblbuscador_de_servidores.Name = "lblbuscador_de_servidores";
+            this.lblbuscador_de_servidores.Size = new System.Drawing.Size(449, 153);
+            this.lblbuscador_de_servidores.TabIndex = 614;
+            this.lblbuscador_de_servidores.Text = "Buscando servidores instalados...";
+            this.lblbuscador_de_servidores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(3, 153);
+            this.panel3.TabIndex = 615;
+            // 
+            // btnInstalarServidor
+            // 
+            this.btnInstalarServidor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnInstalarServidor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInstalarServidor.FlatAppearance.BorderSize = 0;
+            this.btnInstalarServidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInstalarServidor.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
+            this.btnInstalarServidor.ForeColor = System.Drawing.Color.White;
+            this.btnInstalarServidor.Location = new System.Drawing.Point(29, 19);
+            this.btnInstalarServidor.Name = "btnInstalarServidor";
+            this.btnInstalarServidor.Size = new System.Drawing.Size(413, 84);
+            this.btnInstalarServidor.TabIndex = 610;
+            this.btnInstalarServidor.Text = "Instalar Servidor";
+            this.btnInstalarServidor.UseVisualStyleBackColor = false;
+            this.btnInstalarServidor.Visible = false;
+            // 
             // Panel4
             // 
             this.Panel4.BackColor = System.Drawing.Color.White;
@@ -159,7 +204,6 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             // 
             this.PictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.PictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
             this.PictureBox2.Location = new System.Drawing.Point(0, 307);
             this.PictureBox2.Name = "PictureBox2";
             this.PictureBox2.Size = new System.Drawing.Size(482, 249);
@@ -265,7 +309,6 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             // 
             this.PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
             this.PictureBox1.Location = new System.Drawing.Point(0, 13);
             this.PictureBox1.Name = "PictureBox1";
             this.PictureBox1.Size = new System.Drawing.Size(482, 57);
@@ -281,53 +324,6 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.Panel5.Name = "Panel5";
             this.Panel5.Size = new System.Drawing.Size(482, 13);
             this.Panel5.TabIndex = 618;
-            // 
-            // Panel9
-            // 
-            this.Panel9.Controls.Add(this.lblbuscador_de_servidores);
-            this.Panel9.Controls.Add(this.panel3);
-            this.Panel9.Location = new System.Drawing.Point(16, 107);
-            this.Panel9.Name = "Panel9";
-            this.Panel9.Size = new System.Drawing.Size(452, 153);
-            this.Panel9.TabIndex = 619;
-            // 
-            // lblbuscador_de_servidores
-            // 
-            this.lblbuscador_de_servidores.BackColor = System.Drawing.Color.Transparent;
-            this.lblbuscador_de_servidores.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblbuscador_de_servidores.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblbuscador_de_servidores.ForeColor = System.Drawing.Color.White;
-            this.lblbuscador_de_servidores.Location = new System.Drawing.Point(3, 0);
-            this.lblbuscador_de_servidores.Name = "lblbuscador_de_servidores";
-            this.lblbuscador_de_servidores.Size = new System.Drawing.Size(449, 153);
-            this.lblbuscador_de_servidores.TabIndex = 614;
-            this.lblbuscador_de_servidores.Text = "Buscando servidores instalados...";
-            this.lblbuscador_de_servidores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(3, 153);
-            this.panel3.TabIndex = 615;
-            // 
-            // btnInstalarServidor
-            // 
-            this.btnInstalarServidor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.btnInstalarServidor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInstalarServidor.FlatAppearance.BorderSize = 0;
-            this.btnInstalarServidor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInstalarServidor.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
-            this.btnInstalarServidor.ForeColor = System.Drawing.Color.White;
-            this.btnInstalarServidor.Location = new System.Drawing.Point(29, 19);
-            this.btnInstalarServidor.Name = "btnInstalarServidor";
-            this.btnInstalarServidor.Size = new System.Drawing.Size(413, 84);
-            this.btnInstalarServidor.TabIndex = 610;
-            this.btnInstalarServidor.Text = "Instalar Servidor";
-            this.btnInstalarServidor.UseVisualStyleBackColor = false;
-            this.btnInstalarServidor.Visible = false;
             // 
             // panel8
             // 
@@ -391,7 +387,6 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.txtCrearUsuarioDb.Name = "txtCrearUsuarioDb";
             this.txtCrearUsuarioDb.Size = new System.Drawing.Size(227, 262);
             this.txtCrearUsuarioDb.TabIndex = 629;
-            this.txtCrearUsuarioDb.Text = resources.GetString("txtCrearUsuarioDb.Text");
             // 
             // txtArgumentosini
             // 
@@ -400,7 +395,7 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.txtArgumentosini.Name = "txtArgumentosini";
             this.txtArgumentosini.Size = new System.Drawing.Size(446, 216);
             this.txtArgumentosini.TabIndex = 589;
-            this.txtArgumentosini.Text = resources.GetString("txtArgumentosini.Text");
+            this.txtArgumentosini.Text = "";
             // 
             // Panel10
             // 
@@ -551,7 +546,7 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.txtCrear_procedimientos.Name = "txtCrear_procedimientos";
             this.txtCrear_procedimientos.Size = new System.Drawing.Size(434, 145);
             this.txtCrear_procedimientos.TabIndex = 589;
-            this.txtCrear_procedimientos.Text = resources.GetString("txtCrear_procedimientos.Text");
+            this.txtCrear_procedimientos.Text = "";
             // 
             // txtnombre_scrypt
             // 
@@ -657,7 +652,7 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1438, 744);
+            this.ClientSize = new System.Drawing.Size(1370, 744);
             this.Controls.Add(this.Panel4);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.Panel2);
@@ -669,13 +664,13 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).EndInit();
             this.Panel2.ResumeLayout(false);
+            this.Panel9.ResumeLayout(false);
             this.Panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.Panel6.ResumeLayout(false);
             this.Panel7.ResumeLayout(false);
             this.Panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
-            this.Panel9.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.GroupBox6.ResumeLayout(false);
