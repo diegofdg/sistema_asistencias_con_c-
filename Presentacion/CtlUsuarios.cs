@@ -50,7 +50,7 @@ namespace SistemaAsistencias.Presentacion
         {
             Dmodulos funcion = new Dmodulos();
             DataTable dt = new DataTable();
-            funcion.mostrar_Modulos(ref dt);
+            funcion.MostrarModulos(ref dt);
             datalistadoModulos.DataSource = dt;
             datalistadoModulos.Columns[1].Visible = false;
         }

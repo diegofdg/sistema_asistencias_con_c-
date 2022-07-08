@@ -30,6 +30,7 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstalacionBd));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Label66 = new System.Windows.Forms.Label();
             this.PictureBox7 = new System.Windows.Forms.PictureBox();
@@ -387,6 +388,7 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.txtCrearUsuarioDb.Name = "txtCrearUsuarioDb";
             this.txtCrearUsuarioDb.Size = new System.Drawing.Size(227, 262);
             this.txtCrearUsuarioDb.TabIndex = 629;
+            this.txtCrearUsuarioDb.Text = resources.GetString("txtCrearUsuarioDb.Text");
             // 
             // txtArgumentosini
             // 
@@ -395,7 +397,7 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.txtArgumentosini.Name = "txtArgumentosini";
             this.txtArgumentosini.Size = new System.Drawing.Size(446, 216);
             this.txtArgumentosini.TabIndex = 589;
-            this.txtArgumentosini.Text = "";
+            this.txtArgumentosini.Text = resources.GetString("txtArgumentosini.Text");
             // 
             // Panel10
             // 
@@ -546,7 +548,7 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.txtCrear_procedimientos.Name = "txtCrear_procedimientos";
             this.txtCrear_procedimientos.Size = new System.Drawing.Size(434, 145);
             this.txtCrear_procedimientos.TabIndex = 589;
-            this.txtCrear_procedimientos.Text = "";
+            this.txtCrear_procedimientos.Text = resources.GetString("txtCrear_procedimientos.Text");
             // 
             // txtnombre_scrypt
             // 
@@ -579,7 +581,6 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.lblnombredeservicio.Name = "lblnombredeservicio";
             this.lblnombredeservicio.Size = new System.Drawing.Size(134, 20);
             this.lblnombredeservicio.TabIndex = 621;
-            this.lblnombredeservicio.Text = "SQLEXPRESS";
             // 
             // Label11
             // 
@@ -642,6 +643,7 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             // timer4
             // 
             this.timer4.Interval = 10;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // TimerCRARINI
             // 
@@ -658,7 +660,9 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.Controls.Add(this.Panel2);
             this.Controls.Add(this.panel1);
             this.Name = "InstalacionBd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InstalacionBd";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.InstalacionBd_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

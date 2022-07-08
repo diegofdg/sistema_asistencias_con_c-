@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaAsistencias.Logica;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -10,7 +11,7 @@ namespace SistemaAsistencias.Datos
 {
     public class Dmodulos
     {
-		public void mostrar_Modulos(ref DataTable dt)
+		public void MostrarModulos(ref DataTable dt)
 		{
 			try
 			{
@@ -28,6 +29,28 @@ namespace SistemaAsistencias.Datos
 				CONEXIONMAESTRA.cerrar();
 			}
 
+		}
+
+		public bool InsertarModulos(Lmodulos parametros)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlCommand cmd = new SqlCommand("InsertarModulos", CONEXIONMAESTRA.conectar);
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@Modulo", parametros.Modulo);
+				cmd.ExecuteNonQuery();
+				return true;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+				return true;
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
 		}
 	}
 }
