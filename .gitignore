@@ -14,3 +14,4 @@ _ReSharper.*
 
 /src/4 - ApplicationServices/Assistcargo.Simon.WebApi/Reports/*
 !/src/4 - ApplicationServices/Assistcargo.Simon.WebApi/Reports/.gitkeep
+_UpgradeWizard_Files
