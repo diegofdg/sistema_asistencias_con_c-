@@ -18,6 +18,7 @@ namespace SistemaAsistencias.Presentacion
         {
             InitializeComponent();
         }
+
         int idusuario;
 
         private void ToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -28,7 +29,7 @@ namespace SistemaAsistencias.Presentacion
                 {
                     if (TXTCONTRASEÑA.Text == txtconfirmarcontraseña.Text)
                     {
-                        InsertarUsuarioDefecto();
+                        insertarUsuarioDefecto();
 
                     }
                     else
@@ -47,7 +48,7 @@ namespace SistemaAsistencias.Presentacion
             }
         }
 
-        private void InsertarUsuarioDefecto()
+        private void insertarUsuarioDefecto()
         {
             Lusuarios parametros = new Lusuarios();
             Dusuarios funcion = new Dusuarios();
@@ -57,11 +58,11 @@ namespace SistemaAsistencias.Presentacion
             MemoryStream ms = new MemoryStream();
             Icono.Image.Save(ms, Icono.Image.RawFormat);
             parametros.Icono = ms.GetBuffer();
-            if (funcion.InsertarUsuarios(parametros) == true)
+            if (funcion.InsertarUsuario(parametros) == true)
             {
-                InsertarModulos();
+                Insertar_Modulos();
                 ObtenerIdUsuario();
-                InsertarPermisos();
+                insertarPermisos();
             }
         }
 
@@ -71,7 +72,7 @@ namespace SistemaAsistencias.Presentacion
             funcion.ObtenerIdUsuario(ref idusuario, TXTUSUARIO.Text);
         }
 
-        private void InsertarPermisos()
+        private void insertarPermisos()
         {
             DataTable dt = new DataTable();
             Dmodulos funcionModulos = new Dmodulos();
@@ -83,17 +84,15 @@ namespace SistemaAsistencias.Presentacion
                 Dpermisos funcion = new Dpermisos();
                 parametros.IdModulo = idModulo;
                 parametros.IdUsuario = idusuario;
-                if (funcion.InsertarPermisos(parametros) == true)
-                {
-                    MessageBox.Show("!LISTO! RECUERDA que para Iniciar Sesión tu Usuario es: " + TXTUSUARIO.Text + " y tu Contraseña es: " + TXTCONTRASEÑA.Text, "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Dispose();
-                    Login frm = new Login();
-                    frm.ShowDialog();
-                }
+                funcion.InsertarPermisos(parametros);
             }
-
+            MessageBox.Show("!LISTO! RECUERDA que para Iniciar Sesión tu Usuario es: " + TXTUSUARIO.Text + " y tu Contraseña es: " + TXTCONTRASEÑA.Text, "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Dispose();
+            Login frm = new Login();
+            frm.ShowDialog();
         }
-        private void InsertarModulos()
+
+        private void Insertar_Modulos()
         {
             Lmodulos parametros = new Lmodulos();
             Dmodulos funcion = new Dmodulos();

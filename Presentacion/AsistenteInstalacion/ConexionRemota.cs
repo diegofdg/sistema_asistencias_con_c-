@@ -14,11 +14,6 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
         public ConexionRemota()
         {
             InitializeComponent();
-        }
-
-        private void ConexionRemota_Load(object sender, EventArgs e)
-        {
-
-        }
+        }        
     }
 }

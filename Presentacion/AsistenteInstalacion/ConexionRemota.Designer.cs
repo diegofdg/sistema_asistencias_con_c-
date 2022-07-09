@@ -29,18 +29,10 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // ConexionRemota
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "ConexionRemota";
             this.Text = "ConexionRemota";
-            this.Load += new System.EventHandler(this.ConexionRemota_Load);
-            this.ResumeLayout(false);
-
         }
 
         #endregion

@@ -44,7 +44,7 @@ namespace SistemaAsistencias.Presentacion
             this.panelRegistro = new System.Windows.Forms.Panel();
             this.panelIcono = new System.Windows.Forms.Panel();
             this.btnVolverIcono = new System.Windows.Forms.Button();
-            this.AgregarIconoPc = new System.Windows.Forms.PictureBox();
+            this.AgregarIconoPC = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -82,7 +82,7 @@ namespace SistemaAsistencias.Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoUsuarios)).BeginInit();
             this.panelRegistro.SuspendLayout();
             this.panelIcono.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AgregarIconoPc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AgregarIconoPC)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -192,6 +192,7 @@ namespace SistemaAsistencias.Presentacion
             this.txtbuscador.Name = "txtbuscador";
             this.txtbuscador.Size = new System.Drawing.Size(279, 19);
             this.txtbuscador.TabIndex = 0;
+            this.txtbuscador.TextChanged += new System.EventHandler(this.txtbuscador_TextChanged);
             // 
             // datalistadoUsuarios
             // 
@@ -217,6 +218,7 @@ namespace SistemaAsistencias.Presentacion
             this.datalistadoUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datalistadoUsuarios.Size = new System.Drawing.Size(1047, 686);
             this.datalistadoUsuarios.TabIndex = 2;
+            this.datalistadoUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datalistadoUsuarios_CellClick);
             // 
             // Eliminar
             // 
@@ -262,12 +264,12 @@ namespace SistemaAsistencias.Presentacion
             // 
             this.panelIcono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.panelIcono.Controls.Add(this.btnVolverIcono);
-            this.panelIcono.Controls.Add(this.AgregarIconoPc);
+            this.panelIcono.Controls.Add(this.AgregarIconoPC);
             this.panelIcono.Controls.Add(this.flowLayoutPanel2);
             this.panelIcono.Controls.Add(this.flowLayoutPanel3);
-            this.panelIcono.Location = new System.Drawing.Point(703, 57);
+            this.panelIcono.Location = new System.Drawing.Point(695, 169);
             this.panelIcono.Name = "panelIcono";
-            this.panelIcono.Size = new System.Drawing.Size(213, 325);
+            this.panelIcono.Size = new System.Drawing.Size(240, 438);
             this.panelIcono.TabIndex = 618;
             this.panelIcono.Visible = false;
             // 
@@ -288,16 +290,16 @@ namespace SistemaAsistencias.Presentacion
             this.btnVolverIcono.UseVisualStyleBackColor = true;
             this.btnVolverIcono.Click += new System.EventHandler(this.btnVolverIcono_Click);
             // 
-            // AgregarIconoPc
+            // AgregarIconoPC
             // 
-            this.AgregarIconoPc.Image = global::SistemaAsistencias.Properties.Resources.foto__1_;
-            this.AgregarIconoPc.Location = new System.Drawing.Point(26, 413);
-            this.AgregarIconoPc.Name = "AgregarIconoPc";
-            this.AgregarIconoPc.Size = new System.Drawing.Size(168, 164);
-            this.AgregarIconoPc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.AgregarIconoPc.TabIndex = 5;
-            this.AgregarIconoPc.TabStop = false;
-            this.AgregarIconoPc.Click += new System.EventHandler(this.AgregarIconoPc_Click);
+            this.AgregarIconoPC.Image = global::SistemaAsistencias.Properties.Resources.foto__1_;
+            this.AgregarIconoPC.Location = new System.Drawing.Point(26, 413);
+            this.AgregarIconoPC.Name = "AgregarIconoPC";
+            this.AgregarIconoPC.Size = new System.Drawing.Size(168, 164);
+            this.AgregarIconoPC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.AgregarIconoPC.TabIndex = 5;
+            this.AgregarIconoPC.TabStop = false;
+            this.AgregarIconoPC.Click += new System.EventHandler(this.AgregarIconoPC_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -475,6 +477,7 @@ namespace SistemaAsistencias.Presentacion
             this.btnActualizar.TabIndex = 8;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnvolver
             // 
@@ -652,7 +655,7 @@ namespace SistemaAsistencias.Presentacion
             this.panelRegistro.ResumeLayout(false);
             this.panelRegistro.PerformLayout();
             this.panelIcono.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.AgregarIconoPc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AgregarIconoPC)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -708,7 +711,7 @@ namespace SistemaAsistencias.Presentacion
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox AgregarIconoPc;
+        private System.Windows.Forms.PictureBox AgregarIconoPC;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;

@@ -1,12 +1,8 @@
 ﻿using SistemaAsistencias.Datos;
 using SistemaAsistencias.Logica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace SistemaAsistencias.Presentacion
@@ -61,7 +57,6 @@ namespace SistemaAsistencias.Presentacion
                 {
                     ConfirmarSalida();
                 }
-
             }
         }
 
@@ -78,7 +73,6 @@ namespace SistemaAsistencias.Presentacion
                 txtIdentificacion.Clear();
                 txtIdentificacion.Focus();
             }
-
         }
 
         private void InsertarAsistencias()
@@ -102,7 +96,6 @@ namespace SistemaAsistencias.Presentacion
                 txtIdentificacion.Focus();
                 panelObservacion.Visible = false;
             }
-
         }
 
         private void buscarAsistenciasId()
@@ -114,7 +107,6 @@ namespace SistemaAsistencias.Presentacion
             if (Contador > 0)
             {
                 fechaReg = Convert.ToDateTime(dt.Rows[0]["Fecha_entrada"]);
-
             }
         }
 

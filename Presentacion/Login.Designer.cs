@@ -30,6 +30,7 @@ namespace SistemaAsistencias.Presentacion
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Icono = new System.Windows.Forms.PictureBox();
             this.Label66 = new System.Windows.Forms.Label();
             this.PictureBox7 = new System.Windows.Forms.PictureBox();
             this.PanelIngreso_de_contraseña = new System.Windows.Forms.Panel();
@@ -56,6 +57,7 @@ namespace SistemaAsistencias.Presentacion
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).BeginInit();
             this.PanelIngreso_de_contraseña.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -65,6 +67,7 @@ namespace SistemaAsistencias.Presentacion
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Icono);
             this.panel1.Controls.Add(this.Label66);
             this.panel1.Controls.Add(this.PictureBox7);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -72,6 +75,15 @@ namespace SistemaAsistencias.Presentacion
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1053, 90);
             this.panel1.TabIndex = 619;
+            // 
+            // Icono
+            // 
+            this.Icono.Location = new System.Drawing.Point(489, 28);
+            this.Icono.Name = "Icono";
+            this.Icono.Size = new System.Drawing.Size(30, 29);
+            this.Icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Icono.TabIndex = 617;
+            this.Icono.TabStop = false;
             // 
             // Label66
             // 
@@ -128,7 +140,7 @@ namespace SistemaAsistencias.Presentacion
             // 
             // btn_insertar
             // 
-            this.btn_insertar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_insertar.BackColor = System.Drawing.Color.Transparent;            
             this.btn_insertar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_insertar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_insertar.FlatAppearance.BorderSize = 0;
@@ -505,6 +517,7 @@ namespace SistemaAsistencias.Presentacion
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Icono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).EndInit();
             this.PanelIngreso_de_contraseña.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -543,5 +556,6 @@ namespace SistemaAsistencias.Presentacion
         private System.Windows.Forms.Panel PanelUsuarios;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         internal System.Windows.Forms.Label Label8;
+        private System.Windows.Forms.PictureBox Icono;
     }
 }

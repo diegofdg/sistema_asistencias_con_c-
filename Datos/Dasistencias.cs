@@ -1,16 +1,13 @@
 ﻿using SistemaAsistencias.Logica;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace SistemaAsistencias.Datos
 {
-    class Dasistencias
-    {
+	public class Dasistencias
+	{
 		public void BuscarAsistenciasId(ref DataTable dt, int Idpersonal)
 		{
 			try
@@ -30,6 +27,7 @@ namespace SistemaAsistencias.Datos
 				CONEXIONMAESTRA.cerrar();
 			}
 		}
+
 		public bool InsertarAsistencias(Lasistencias parametros)
 		{
 			try
@@ -56,6 +54,7 @@ namespace SistemaAsistencias.Datos
 				CONEXIONMAESTRA.cerrar();
 			}
 		}
+
 		public bool ConfirmarSalida(Lasistencias parametros)
 		{
 			try

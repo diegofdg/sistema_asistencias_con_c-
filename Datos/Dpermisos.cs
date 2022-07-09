@@ -1,10 +1,7 @@
 ﻿using SistemaAsistencias.Logica;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace SistemaAsistencias.Datos
@@ -33,6 +30,7 @@ namespace SistemaAsistencias.Datos
                 CONEXIONMAESTRA.cerrar();
             }
         }
+
         public void MostrarPermisos(ref DataTable dt, Lpermisos parametros)
         {
             try
@@ -51,6 +49,7 @@ namespace SistemaAsistencias.Datos
                 MessageBox.Show(ex.StackTrace);
             }
         }
+
         public bool EliminarPermisos(Lpermisos parametros)
         {
             try

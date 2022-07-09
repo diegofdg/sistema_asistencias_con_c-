@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace SistemaAsistencias.Datos
 {
-    public class Dusuarios
-    {
-		public bool InsertarUsuarios(Lusuarios parametros)
+	public class Dusuarios
+	{
+		public bool InsertarUsuario(Lusuarios parametros)
 		{
 			try
 			{
@@ -68,7 +68,6 @@ namespace SistemaAsistencias.Datos
 			}
 			catch (Exception ex)
 			{
-
 				MessageBox.Show(ex.StackTrace);
 			}
 			finally
@@ -77,7 +76,98 @@ namespace SistemaAsistencias.Datos
 			}
 		}
 
-		public void VerificarUsuarios(ref string Indicador)
+		public bool EliminarUsuario(Lusuarios parametros)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlCommand cmd = new SqlCommand("EliminarUsuario", CONEXIONMAESTRA.conectar);
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@idusuario", parametros.IdUsuario);
+				cmd.Parameters.AddWithValue("@login", parametros.Login);
+				cmd.ExecuteNonQuery();
+				return true;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+				return false;
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
+
+		public bool RestaurarUsuario(Lusuarios parametros)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlCommand cmd = new SqlCommand("RestaurarUsuario", CONEXIONMAESTRA.conectar);
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@idusuario", parametros.IdUsuario);
+				cmd.ExecuteNonQuery();
+				return true;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+				return false;
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
+
+		public bool EditarUsuario(Lusuarios parametros)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlCommand cmd = new SqlCommand("EditarUsuario", CONEXIONMAESTRA.conectar);
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.Parameters.AddWithValue("@idusuario", parametros.IdUsuario);
+				cmd.Parameters.AddWithValue("@nombres", parametros.Nombre);
+				cmd.Parameters.AddWithValue("@Login", parametros.Login);
+				cmd.Parameters.AddWithValue("@Password", parametros.Password);
+				cmd.Parameters.AddWithValue("@Icono", parametros.Icono);
+				cmd.ExecuteNonQuery();
+				return true;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+				return false;
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
+
+		public void BuscarUsuarios(ref DataTable dt, string buscador)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlDataAdapter da = new SqlDataAdapter("Buscarusuarios", CONEXIONMAESTRA.conectar);
+				da.SelectCommand.CommandType = CommandType.StoredProcedure;
+				da.SelectCommand.Parameters.AddWithValue("@buscador", buscador);
+				da.Fill(dt);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.StackTrace);
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
+
+		public void VerificarUsuario(ref string Indicador)
 		{
 			try
 			{
@@ -108,7 +198,6 @@ namespace SistemaAsistencias.Datos
 			catch (Exception ex)
 			{
 				id = 0;
-
 			}
 			finally
 			{

@@ -2,13 +2,10 @@
 using SistemaAsistencias.Logica;
 using SistemaAsistencias.Presentacion.AsistenteInstalacion;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace SistemaAsistencias.Presentacion
@@ -19,6 +16,7 @@ namespace SistemaAsistencias.Presentacion
         {
             InitializeComponent();
         }
+
         string Usuario;
         int Idusuario;
         int Contador;
@@ -28,6 +26,7 @@ namespace SistemaAsistencias.Presentacion
         {
             validar_conexion();
         }
+
         private void validar_conexion()
         {
             VerificarConexion();
@@ -64,14 +63,13 @@ namespace SistemaAsistencias.Presentacion
         private void VerificarConexion()
         {
             Dusuarios funcion = new Dusuarios();
-            funcion.VerificarUsuarios(ref Indicador);
+            funcion.VerificarUsuario(ref Indicador);
         }
 
         private void DibujarUsuarios()
         {
             try
             {
-
                 PanelUsuarios.Visible = true;
                 PanelUsuarios.Dock = DockStyle.Fill;
                 PanelUsuarios.BringToFront();
@@ -113,13 +111,11 @@ namespace SistemaAsistencias.Presentacion
 
                     flowLayoutPanel1.Controls.Add(p1);
 
-                    b.Click += mieventoLabel;
                     I1.Click += miEventoImagen;
                 }
             }
             catch (Exception)
             {
-
 
             }
         }
@@ -127,14 +123,10 @@ namespace SistemaAsistencias.Presentacion
         private void miEventoImagen(object sender, EventArgs e)
         {
             Usuario = Convert.ToString(((PictureBox)sender).Tag);
+            Icono.Image = ((PictureBox)sender).Image;
             MostrarPanelPass();
         }
 
-        private void mieventoLabel(object sender, EventArgs e)
-        {
-            Usuario = ((Label)sender).Text;
-            MostrarPanelPass();
-        }
 
         private void MostrarPanelPass()
         {
@@ -145,10 +137,9 @@ namespace SistemaAsistencias.Presentacion
 
         private void txtcontraseña_TextChanged(object sender, EventArgs e)
         {
-            validarUsuarios();
+            ValidarUsuario();
         }
-
-        private void validarUsuarios()
+        private void ValidarUsuario()
         {
             Lusuarios parametros = new Lusuarios();
             Dusuarios funcion = new Dusuarios();
@@ -159,6 +150,9 @@ namespace SistemaAsistencias.Presentacion
             {
                 Dispose();
                 MenuPrincipal frm = new MenuPrincipal();
+                frm.Idusuario = Idusuario;
+                frm.LoginV = Usuario;
+                frm.Icono.Image = Icono.Image;
                 frm.ShowDialog();
             }
         }

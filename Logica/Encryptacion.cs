@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
 
 namespace SistemaAsistencias.Logica
 {
@@ -21,6 +18,7 @@ namespace SistemaAsistencias.Logica
             byte[] encryptedData = ms.ToArray();
             return encryptedData;
         }
+
         public string Encrypt(string Data, string Password, int Bits)
         {
             byte[] clearBytes = System.Text.Encoding.Unicode.GetBytes(Data);
@@ -44,11 +42,9 @@ namespace SistemaAsistencias.Logica
             {
                 return String.Concat(Bits);
             }
-
         }
+
         private byte[] Decrypt(byte[] cipherData, byte[] Key, byte[] IV)
-
-
         {
             MemoryStream ms = new MemoryStream();
             Rijndael alg = Rijndael.Create();
@@ -60,13 +56,11 @@ namespace SistemaAsistencias.Logica
             byte[] decryptedData = ms.ToArray();
             return decryptedData;
         }
+
         public string Decrypt(string Data, string Password, int Bits)
         {
             try
             {
-
-
-
                 byte[] cipherBytes = Convert.FromBase64String(Data);
                 PasswordDeriveBytes pdb = new PasswordDeriveBytes(Password, new byte[] { 0x0, 0x1, 0x2, 0x1C, 0x1D, 0x1E, 0x3, 0x4, 0x5, 0xF, 0x20, 0x21, 0xAD, 0xAF, 0xA4 });
                 if (Bits == 128)

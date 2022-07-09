@@ -84,7 +84,6 @@ namespace SistemaAsistencias.Logica
             WeekOfYear,
             Year
         }
-
         public static long DateDiff(DateInterval intervalType, DateTime dateOne, DateTime dateTwo)
         {
             switch (intervalType)
@@ -128,7 +127,6 @@ namespace SistemaAsistencias.Logica
                     return dateTwo.Year - dateOne.Year;
                 default:
                     return 0;
-
             }
         }
     }

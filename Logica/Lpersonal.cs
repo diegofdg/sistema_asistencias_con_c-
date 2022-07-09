@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace SistemaAsistencias.Logica
+﻿namespace SistemaAsistencias.Logica
 {
     public class Lpersonal
     {

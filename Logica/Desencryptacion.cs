@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml;
+﻿using System.Xml;
 
 namespace SistemaAsistencias.Logica
 {
@@ -12,6 +8,7 @@ namespace SistemaAsistencias.Logica
         static public string CnString;
         static string dbcnString;
         static public string appPwdUnique = "Orus369.codigo369";
+
         public static object checkServer()
         {
             XmlDocument doc = new XmlDocument();
@@ -21,7 +18,5 @@ namespace SistemaAsistencias.Logica
             CnString = (aes.Decrypt(dbcnString, appPwdUnique, int.Parse("256")));
             return CnString;
         }
-
-
     }
 }
