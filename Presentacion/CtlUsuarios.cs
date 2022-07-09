@@ -221,7 +221,7 @@ namespace SistemaAsistencias.Presentacion
             ocultarPanelIconos();
         }
         private void AgregarIconoPC_Click(object sender, EventArgs e)
-        {
+        {            
             dlg.InitialDirectory = "";
             dlg.Filter = "Imagenes|*.jpg;*.png";
             dlg.FilterIndex = 2;

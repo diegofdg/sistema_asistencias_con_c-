@@ -53,6 +53,7 @@
     <Compile Include="Datos\CONEXIONMAESTRA.cs" />
     <Compile Include="Datos\Dasistencias.cs" />
     <Compile Include="Datos\Dcargos.cs" />
+    <Compile Include="Datos\Dcopiasbd.cs" />
     <Compile Include="Datos\Dmodulos.cs" />
     <Compile Include="Datos\Dpermisos.cs" />
     <Compile Include="Datos\Dpersonal.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Logica\Encryptacion.cs" />
     <Compile Include="Logica\Lasistencias.cs" />
     <Compile Include="Logica\Lcargos.cs" />
+    <Compile Include="Logica\Lcopiasbd.cs" />
     <Compile Include="Logica\Lmodulos.cs" />
     <Compile Include="Logica\Lpermisos.cs" />
     <Compile Include="Logica\Lpersonal.cs" />
@@ -83,6 +85,12 @@
     </Compile>
     <Compile Include="Presentacion\AsistenteInstalacion\InstalacionBd.Designer.cs">
       <DependentUpon>InstalacionBd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\CopiasBd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CopiasBd.Designer.cs">
+      <DependentUpon>CopiasBd.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\CtlUsuarios.cs">
       <SubType>UserControl</SubType>

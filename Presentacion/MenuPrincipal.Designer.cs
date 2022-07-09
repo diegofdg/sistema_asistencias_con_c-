@@ -58,6 +58,7 @@ namespace SistemaAsistencias.Presentacion
             this.PanelPadre = new System.Windows.Forms.Panel();
             this.panelBienvenida = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.dlg = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -159,6 +160,7 @@ namespace SistemaAsistencias.Presentacion
             this.btnRespaldos.Text = "Respaldos";
             this.btnRespaldos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRespaldos.UseVisualStyleBackColor = false;
+            this.btnRespaldos.Click += new System.EventHandler(this.btnRespaldos_Click);
             // 
             // panel15
             // 
@@ -204,6 +206,7 @@ namespace SistemaAsistencias.Presentacion
             this.btnRestaurar.Text = "Restaurar Bd";
             this.btnRestaurar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRestaurar.UseVisualStyleBackColor = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
             // 
             // panel12
             // 
@@ -373,6 +376,7 @@ namespace SistemaAsistencias.Presentacion
             this.Icono.Location = new System.Drawing.Point(0, 0);
             this.Icono.Name = "Icono";
             this.Icono.Size = new System.Drawing.Size(59, 54);
+            this.Icono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Icono.TabIndex = 0;
             this.Icono.TabStop = false;
             // 
@@ -405,6 +409,10 @@ namespace SistemaAsistencias.Presentacion
             this.label3.TabIndex = 0;
             this.label3.Text = "Bienvenido a Orus369";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dlg
+            // 
+            this.dlg.FileName = "openFileDialog1";
             // 
             // MenuPrincipal
             // 
@@ -465,5 +473,6 @@ namespace SistemaAsistencias.Presentacion
         private System.Windows.Forms.Panel panelBienvenida;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.PictureBox Icono;
+        private System.Windows.Forms.OpenFileDialog dlg;
     }
 }
