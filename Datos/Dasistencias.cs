@@ -79,5 +79,27 @@ namespace SistemaAsistencias.Datos
 				CONEXIONMAESTRA.cerrar();
 			}
 		}
+
+		public void MostrarAsistenciasDiarias(ref DataTable dt, DateTime desde, DateTime hasta, int semana)
+		{
+			try
+			{
+				CONEXIONMAESTRA.abrir();
+				SqlDataAdapter da = new SqlDataAdapter("MostrarAsistenciasDiarias", CONEXIONMAESTRA.conectar);
+				da.SelectCommand.CommandType = CommandType.StoredProcedure;
+				da.SelectCommand.Parameters.AddWithValue("@desde", desde);
+				da.SelectCommand.Parameters.AddWithValue("@hasta", hasta);
+				da.SelectCommand.Parameters.AddWithValue("@semana", semana);
+				da.Fill(dt);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.StackTrace);
+			}
+			finally
+			{
+				CONEXIONMAESTRA.cerrar();
+			}
+		}
 	}
 }

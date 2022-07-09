@@ -127,5 +127,12 @@ namespace SistemaAsistencias.Presentacion
         {
             InsertarAsistencias();
         }
+
+        private void BtnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            Dispose();
+            Login frm = new Login();
+            frm.ShowDialog();
+        }
     }
 }

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\mis_proyectos\SistemaAsistencias\SistemaAsistencias.csproj" />
+  <event action="Analyze" type="Success" name="ConexionRemota.resx" path="D:\mis_proyectos\SistemaAsistencias\Presentacion\AsistenteInstalacion\ConexionRemota.resx" />
+  <event action="Analyze" type="Success" name="EleccionServidor.resx" path="D:\mis_proyectos\SistemaAsistencias\Presentacion\AsistenteInstalacion\EleccionServidor.resx" />
+  <event action="Analyze" type="Success" name="InstalacionBd.resx" path="D:\mis_proyectos\SistemaAsistencias\Presentacion\AsistenteInstalacion\InstalacionBd.resx" />
+  <event action="Analyze" type="Success" name="UsuarioPrincipal.resx" path="D:\mis_proyectos\SistemaAsistencias\Presentacion\AsistenteInstalacion\UsuarioPrincipal.resx" />
+  <event action="Analyze" type="Success" name="CtlUsuarios.resx" path="D:\mis_proyectos\SistemaAsistencias\Presentacion\CtlUsuarios.resx" />
+  <event action="Analyze" type="Success" name="Login.resx" path="D:\mis_proyectos\SistemaAsistencias\Presentacion\Login.resx" />
+  <event action="Analyze" type="Success" name="MenuPrincipal.resx" path="D:\mis_proyectos\SistemaAsistencias\Presentacion\MenuPrincipal.resx" />
+  <event action="Analyze" type="Success" name="Personal.resx" path="D:\mis_proyectos\SistemaAsistencias\Presentacion\Personal.resx" />
+  <event action="Analyze" type="Success" name="TomarAsistencia.resx" path="D:\mis_proyectos\SistemaAsistencias\Presentacion\TomarAsistencia.resx" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="D:\mis_proyectos\SistemaAsistencias\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="SistemaAsistencias" path="D:\mis_proyectos\SistemaAsistencias\SistemaAsistencias.csproj" />
+  <event action="Analyze" type="Success" name="SistemaAsistencias" path="D:\mis_proyectos\SistemaAsistencias\SistemaAsistencias.sln" />
+  <event action="Backup" type="Success" name="SistemaAsistencias" path="D:\mis_proyectos\SistemaAsistencias\SistemaAsistencias.csproj" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="D:\mis_proyectos\SistemaAsistencias\SistemaAsistencias.csproj" />
+  <event action="Upgrade" type="Success" name="SistemaAsistencias" path="D:\mis_proyectos\SistemaAsistencias\SistemaAsistencias.csproj" />
+  <event action="Upgrade" type="Success" name="SistemaAsistencias" path="D:\mis_proyectos\SistemaAsistencias\SistemaAsistencias.sln" />
+</log>

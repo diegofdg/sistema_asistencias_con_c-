@@ -63,7 +63,10 @@ namespace SistemaAsistencias.Presentacion
 
         private void btnConsultas_Click(object sender, EventArgs e)
         {
-
+            PanelPadre.Controls.Clear();
+            Preplanilla control = new Preplanilla();
+            control.Dock = DockStyle.Fill;
+            PanelPadre.Controls.Add(control);
         }
 
         private void btnPersonal_Click(object sender, EventArgs e)
@@ -80,6 +83,13 @@ namespace SistemaAsistencias.Presentacion
             CtlUsuarios control = new CtlUsuarios();
             control.Dock = DockStyle.Fill;
             PanelPadre.Controls.Add(control);
+        }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            Dispose();
+            TomarAsistencia frm = new TomarAsistencia();
+            frm.ShowDialog();
         }
     }
 }

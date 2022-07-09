@@ -42,6 +42,12 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting, Version=13.0.19.116, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WinForms, Version=13.0.19.116, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\CONEXIONMAESTRA.cs" />
@@ -102,6 +108,18 @@
     <Compile Include="Presentacion\Personal.Designer.cs">
       <DependentUpon>Personal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Preplanilla.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Preplanilla.Designer.cs">
+      <DependentUpon>Preplanilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\ReportAsistencias.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\ReportAsistencias.Designer.cs">
+      <DependentUpon>ReportAsistencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\TomarAsistencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,9 +158,16 @@
     <EmbeddedResource Include="Presentacion\Personal.resx">
       <DependentUpon>Personal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Preplanilla.resx">
+      <DependentUpon>Preplanilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\ReportAsistencias.resx">
+      <DependentUpon>ReportAsistencias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\TomarAsistencia.resx">
       <DependentUpon>TomarAsistencia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
