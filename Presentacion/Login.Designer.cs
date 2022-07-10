@@ -29,6 +29,7 @@ namespace SistemaAsistencias.Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Icono = new System.Windows.Forms.PictureBox();
             this.Label66 = new System.Windows.Forms.Label();
@@ -140,7 +141,7 @@ namespace SistemaAsistencias.Presentacion
             // 
             // btn_insertar
             // 
-            this.btn_insertar.BackColor = System.Drawing.Color.Transparent;            
+            this.btn_insertar.BackColor = System.Drawing.Color.Transparent;
             this.btn_insertar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_insertar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_insertar.FlatAppearance.BorderSize = 0;
@@ -510,9 +511,10 @@ namespace SistemaAsistencias.Presentacion
             this.Controls.Add(this.PanelUsuarios);
             this.Controls.Add(this.PanelIngreso_de_contraseña);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.Text = " ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);

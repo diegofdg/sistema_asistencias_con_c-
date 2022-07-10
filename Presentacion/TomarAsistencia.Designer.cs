@@ -30,6 +30,7 @@ namespace SistemaAsistencias.Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TomarAsistencia));
             this.Panel6 = new System.Windows.Forms.Panel();
             this.Panel9 = new System.Windows.Forms.Panel();
             this.BtnIniciarSesion = new System.Windows.Forms.Button();
@@ -556,8 +557,10 @@ namespace SistemaAsistencias.Presentacion
             this.Controls.Add(this.panelObservacion);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.Panel6);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TomarAsistencia";
-            this.Text = "TomarAsistencias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TomarAsistencias_Load);
             this.Panel6.ResumeLayout(false);
             this.Panel9.ResumeLayout(false);

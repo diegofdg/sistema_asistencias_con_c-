@@ -165,7 +165,6 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             // 
             // panel2
             // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.Location = new System.Drawing.Point(670, 91);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(3, 135);
@@ -173,7 +172,6 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             // 
             // panel3
             // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.Location = new System.Drawing.Point(761, 291);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(3, 139);
@@ -181,7 +179,6 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             // 
             // PictureBox1
             // 
-            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
             this.PictureBox1.Location = new System.Drawing.Point(344, 91);
             this.PictureBox1.Name = "PictureBox1";
             this.PictureBox1.Size = new System.Drawing.Size(472, 339);
@@ -189,7 +186,7 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.PictureBox1.TabIndex = 604;
             this.PictureBox1.TabStop = false;
             // 
-            // ElecccionServidor
+            // EleccionServidor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -197,8 +194,10 @@ namespace SistemaAsistencias.Presentacion.AsistenteInstalacion
             this.ClientSize = new System.Drawing.Size(1201, 615);
             this.Controls.Add(this.Panel4);
             this.Controls.Add(this.panel1);
-            this.Name = "ElecccionServidor";
-            this.Text = "ElecccionServidor";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "EleccionServidor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox7)).EndInit();
